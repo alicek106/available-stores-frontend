@@ -1,0 +1,12 @@
+body {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+
+/* Customize container */
+@media (min-width: 48em) {
+  .container {
+    max-width: 90rem;
+  }
+}

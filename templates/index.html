@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% block body %}
+    {{ super() }}
+    <script src="{{ url_for('static',filename='js/index.js') }}"></script>
+
+    <div class="container-fluid bg-light">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-12">
+                <div class="header">
+                    <h3>경기지역화폐 가맹점 검색</h3>
+                </div>
+                <hr>
+            </div>
+
+            <div class="col-md-2 pt-3">
+                <div class="form-group ">
+                    <select class="form-control selectpicker" title="지역 선택" id="location">
+                        <option>수원</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="form-group ">
+                    <input type="text" class="form-control" id='store-name' , placeholder="가게 이름을 입력하세요 (2글자 이상)">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-default btn-block" onclick="query_stores();">
+
+                    <i class="glyphicon glyphicon-search" style="margin-right:10px"></i>
+                    검색하기
+                </button>
+            </div>
+
+            <div class="col-md-12" style="margin-bottom: 20px;">
+                <span class="text-muted">
+                    <br>
+                    사용 예시 : "엘로 스터디 카페" -> "엘로" 검색
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table" style='font-size:80%'>
+                    <thead>
+                    <tr>
+                        <th scope="col">이름</th>
+                        <th scope="col">주소</th>
+                    </tr>
+                    </thead>
+
+                    <tbody id="stores-table-tbody">
+{#                        <tr>#}
+{#                            <th scope="row">스터디앤카페엘로</th>#}
+{#                            <td>경기 수원시 영통구 영일로6번길</td>#}
+{#                        </tr>#}
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
