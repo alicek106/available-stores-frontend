@@ -10,7 +10,7 @@ api.add_resource(SearchStoreResource, '/search')
 
 @app.route("/", methods=['GET'])
 def root():
-    return render_template("index.html", runtime=os.environ['RUNTIME'], version=os.environ['version'])
+    return render_template("index.html", runtime=os.environ['RUNTIME'])
 
 # @app.route('/', defaults={'path': ''})
 # @app.route('/<path:path>')
