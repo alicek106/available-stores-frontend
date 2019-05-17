@@ -1,11 +1,12 @@
 from flask_restful import Resource
 from flask import request
-from config_generator import ConfigGenerator
+from modules.config_generator import ConfigGenerator
 import requests
 
 config_generator = ConfigGenerator()
 location = config_generator.locations
 search_url = config_generator.find_endpoint
+
 
 class SearchStoreResource(Resource):
     def post(self):

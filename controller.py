@@ -1,6 +1,6 @@
-from flask import Flask, session, url_for, redirect, render_template, request, abort, flash, jsonify, Response
+from flask import Flask, render_template
 from flask_restful import Api
-from search_store_resource import SearchStoreResource
+from modules.search_store_resource import SearchStoreResource
 import os
 
 app = Flask(__name__)
