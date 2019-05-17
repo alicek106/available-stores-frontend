@@ -2,10 +2,12 @@ from flask import Flask, render_template
 from flask_restful import Api
 from modules.search_store_resource import SearchStoreResource
 import os
+from modules.send_message_resource import SendMessageResource
 
 app = Flask(__name__)
 api = Api(app)
 api.add_resource(SearchStoreResource, '/search')
+api.add_resource(SendMessageResource, '/report')
 
 
 @app.route("/", methods=['GET'])

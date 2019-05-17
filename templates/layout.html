@@ -16,6 +16,7 @@
 
 
     <link href="{{ url_for('static',filename='css/theme.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static',filename='js/layout.js') }}"></script>
 
 </head>
 
@@ -63,7 +64,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
-                <button type="button" class="btn btn-primary" onclick="alert('기능 준비중입니다 ㅠ.ㅠ')">의견 보내기!</button>
+                <button type="button" class="btn btn-primary" onclick="send_message()">의견 보내기!</button>
             </div>
         </div>
     </div>

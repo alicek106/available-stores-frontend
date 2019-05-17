@@ -1,11 +1,10 @@
 import boto3
 import os
 
-
 class ConfigGenerator:
     def __init__(self):
         self.locations = {
-            '수원' : 1
+            '수원': 1
         }
 
         client = boto3.client('ssm', region_name='ap-northeast-2', endpoint_url=os.environ['ssm_url'])
@@ -14,3 +13,7 @@ class ConfigGenerator:
             WithDecryption=True
         )
         self.find_endpoint = params['Parameter']['Value'] + 'find_available_stores'
+        self.send_endpoint = params['Parameter']['Value'] + 'send_message'
+
+
+config_generator = ConfigGenerator()
