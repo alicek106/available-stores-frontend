@@ -1,5 +1,7 @@
 import boto3
 import os
+import json
+
 
 class ConfigGenerator:
     def __init__(self):
@@ -18,6 +20,9 @@ class ConfigGenerator:
         )
         self.find_endpoint = params['Parameter']['Value'] + 'find_available_stores'
         self.send_endpoint = params['Parameter']['Value'] + 'send_message'
+
+        with open('updates.json') as data_file:
+            self.updates = json.load(data_file)
 
 
 config_generator = ConfigGenerator()
