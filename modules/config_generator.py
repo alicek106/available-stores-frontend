@@ -6,7 +6,8 @@ import json
 class ConfigGenerator:
     def __init__(self):
         self.locations = {
-            '수원': 1
+            '수원': 1,
+            '용인': 2
         }
 
         if os.environ['local'] == '1':
