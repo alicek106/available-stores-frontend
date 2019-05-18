@@ -7,7 +7,11 @@ class ConfigGenerator:
             '수원': 1
         }
 
-        client = boto3.client('ssm', region_name='ap-northeast-2', endpoint_url=os.environ['ssm_url'])
+        if os.environ['local'] == '1':
+            client = boto3.client('ssm', region_name='ap-northeast-2')
+        elif os.environ['local'] == '0':
+            client = boto3.client('ssm', region_name='ap-northeast-2', endpoint_url=os.environ['ssm_url'])
+
         params = client.get_parameter(
             Name='api_gateway_url',
             WithDecryption=True
