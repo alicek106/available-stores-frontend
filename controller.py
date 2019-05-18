@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
 from flask_restful import Api
 from modules.search_store_resource import SearchStoreResource
 import os
@@ -9,6 +9,9 @@ api = Api(app)
 api.add_resource(SearchStoreResource, '/search')
 api.add_resource(SendMessageResource, '/report')
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return redirect('/', code=302)
 
 @app.route("/", methods=['GET'])
 def root():
