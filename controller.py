@@ -19,6 +19,10 @@ def page_not_found(e):
 def root():
     return render_template("index.html", runtime=os.environ['RUNTIME'], updates=updates)
 
+@app.route("/madohomu", methods=['GET'])
+def madohomu():
+    return render_template("madohomu.html")
+
 # @app.route('/', defaults={'path': ''})
 # @app.route('/<path:path>')
 # def catch_all(path):

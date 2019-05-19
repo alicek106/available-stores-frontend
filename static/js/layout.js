@@ -1,4 +1,10 @@
 function send_message() {
+    if($('#message-text').val() == "madohomulovelove"){
+        window.open("/madohomu");
+        return;
+    }
+
+
     var obj = new Object();
     obj.message = $('#message-text').val()
 
