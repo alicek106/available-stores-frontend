@@ -21,7 +21,7 @@ function send_message() {
                 alert('100자 이내로 작성해주세요.')
             } else {
                 alert('소중한 의견 감사합니다.')
-                location.reload()
+                $('#bug-report').modal('hide');
             }
         }
     });
