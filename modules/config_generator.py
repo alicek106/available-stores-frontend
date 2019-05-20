@@ -8,7 +8,8 @@ class ConfigGenerator:
         self.locations = {
             '수원': 1,
             '용인': 2,
-            '고양': 3
+            '고양': 3,
+            '부천': 4
         }
 
         if os.environ['local'] == '1':
