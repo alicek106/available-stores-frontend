@@ -9,7 +9,9 @@ class ConfigGenerator:
             '수원': 1,
             '용인': 2,
             '고양': 3,
-            '부천': 4
+            '부천': 4,
+            '광명': 5,
+            '안산': 6
         }
 
         if os.environ['local'] == '1':
