@@ -45,15 +45,11 @@
             <div class="modal-body">
                 <div class="alert alert-success" role="alert">
                     {% for record in updates %}
-                        <h5 class="alert-heading">
-                            {{ record['date'] }}
-                            {{ record['version'] }}
-                        </h5>
-                        <p><span>{{ record['content'] }}</span></p>
-
-                        {% if loop.index != (updates|length) %}
-                            <hr>
-                        {% endif %}
+                        <span>
+                        {{ record['date'] }}
+                        {{ record['version'] }} : {{ record['content'] }}
+                        </span>
+                        <br>
                     {% endfor %}
                 </div>
                 <hr>
@@ -75,6 +71,9 @@
                 </a>
                 <a href="https://www.iansan.net/department/regionalEcoDivision/Reference.jsp?menuId=01070071&id=454&mode=S&currentPage=1&articleId=1167097">
                     안산
+                </a>
+                <a href="https://www.pyeongtaek.go.kr/pyeongtaek/giftCardFranchise/list.do?mId=0901030000">
+                    평택
                 </a>
                 <hr>
                 이 서비스는 공익을 위해 만들어졌으며, 일체의 수익을 창출하지 않습니다. 서버 운영 비용은 모두 학생 개인 돈으로 충당하고 있습니다.
