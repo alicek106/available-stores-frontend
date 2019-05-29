@@ -15,6 +15,7 @@ class SearchStoreResource(Resource):
         if len(content['name']) < 2:
             return {'code': 400, 'msg': 'Too short search object'}
 
-        params = {'name': content['name'], 'location': location[content['location']]}
+        params = {'name': content['name'], 'location': location[content['location']],
+                  'detail_location': content['detail_location']}
         response = requests.post(search_url, params=params)
         return response.json()

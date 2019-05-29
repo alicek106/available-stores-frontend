@@ -47,6 +47,7 @@ function query_stores() {
     var obj = new Object();
     obj.name = $('#store-name').val()
     obj.location = $("#location option:selected").val();
+    obj.detail_location = $('#detail-location').val()
 
     $.ajax({
         type: "POST",
