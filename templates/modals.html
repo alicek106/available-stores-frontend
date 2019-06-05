@@ -135,3 +135,38 @@
             </div>
         </div>
         <!-- Update History Modal End -->
+    </div>
+</div>
+
+
+<div class="modal fade" id="service-close" tabindex="-1" role="dialog" aria-labelledby="service-close-label"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">서비스 종료 안내</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    이 서비스는 6~7월 중 종료될 예정이며, 그 이유는 아래와 같습니다.
+                    <hr>
+                    <h4>서비스 종료 이유 1 :</h4>
+                    <a href="https://twitter.com/smallbusiness_/status/1131499335084961792">경기도 정책관 및 소상공인과의 약속</a>대로, 6월 5일부터 경기지역화폐가 공식적으로 가맹점 검색 기능을 제공하기 시작했습니다.
+                    따라서 제가 만든 서비스보다는, 공식 대행사가 운영하는 <a href="http://www.gmoney.or.kr/">검색 시스템</a>을 이용해주시기 바랍니다.
+                    <hr>
+                    <h4>서비스 종료 이유 2 : </h4> 이 서비스는 매달 5~10만원의 유지 비용이 필요합니다.
+                    경기지역화폐가 공식적으로 검색 서비스를 제공한다면
+                    굳이 제 돈을 들여 이 서비스를 운영할 필요가 없습니다. (참고로 이 서비스는 광고도 넣지 않아 수익이 아예 창출되지 않습니다)
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                <button type="button" class="btn btn-primary" onclick="send_message()">의견 보내기!</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bug Report Modal End -->
