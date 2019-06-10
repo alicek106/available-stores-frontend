@@ -26,6 +26,7 @@ class ConfigGenerator:
             '하남': 18,
             '이천': 19,
             '포천': 20,
+            '연천': 21
         }
 
         if os.environ['local'] == '1':
