@@ -1,5 +1,5 @@
 boto3==1.9.150
-requests==2.21.0
+requests==2.31.0
 Flask==1.0.2
 Flask_Bootstrap==3.3.7.1
 Flask_RESTful==0.3.7
